@@ -11,7 +11,7 @@ def single_assay_processing(ref, file1, file2, results, snps): #ref=sfor.fasta m
 
     clean1 = pref1 + '_qc.fastq.gz' # cleaning files
     clean2 = pref2 + '_qc.fastq.gz'
-    comm('bbduk.sh in1={} in2={} out1={} out2={} maq=22 literal=AGATCGGAAGAG,TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG,GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG ref=sfor.fasta ktrim=l k=31 mink=4 hdist=1 tpe tbo minlen=80'.format(file1, file2, clean1, clean2))
+    comm('bbduk.sh in1={} in2={} out1={} out2={} maq=22 literal=AGATCGGAAGAG,TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG,GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG ktrim=l k=31 mink=4 hdist=1 tpe tbo minlen=80'.format(file1, file2, clean1, clean2))
     
     #comm('rm {}'.format(file1)) # we already do not need original files
     #comm('rm {}'.format(file2))
